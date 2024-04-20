@@ -20,5 +20,6 @@ type Greeter struct{}
 
 func (g Greeter) Hello(ctx context.Context, req *pb.HelloRequest) (*pb.HelloReply, error) {
 	log.Infof("got hello request: %s", req.Msg)
+    log.Infof("got hello request again: %s", req.Msg)
 	return &pb.HelloReply{Msg: "Hello " + req.Msg + "!"}, nil
 }
